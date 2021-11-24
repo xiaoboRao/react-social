@@ -1,3 +1,5 @@
+import {Users} from "../../dummyData"
+import Online from "../online/Online"
 import "./rightbar.css"
 
 export default function Rightbar() {
@@ -14,42 +16,9 @@ export default function Rightbar() {
             </div>
             <h4 className="rightTitle">Online Friends</h4>
             <ul className="rightbarFriendList">
-                <li className="rightbarFriend">
-                    <div className="rightbarProfileContainer">
-                        <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg"/>
-                        <span className="rightbarOnline"></span>
-                    </div>
-                    <span className="rightbarUsername">
-                          Mr Liu
-                    </span>
-                </li>
-                <li className="rightbarFriend">
-                    <div className="rightbarProfileContainer">
-                        <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg"/>
-                        <span className="rightbarOnline"></span>
-                    </div>
-                    <span className="rightbarUsername">
-                          Mr Liu
-                    </span>
-                </li>
-                <li className="rightbarFriend">
-                    <div className="rightbarProfileContainer">
-                        <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg"/>
-                        <span className="rightbarOnline"></span>
-                    </div>
-                    <span className="rightbarUsername">
-                          Mr Liu
-                    </span>
-                </li>
-                <li className="rightbarFriend">
-                    <div className="rightbarProfileContainer">
-                        <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg"/>
-                        <span className="rightbarOnline"></span>
-                    </div>
-                    <span className="rightbarUsername">
-                        Mr Liu
-                    </span>
-                </li>
+                {Users.map((user) => (
+                    <Online key={ user.id } user={ user } />
+                ))}
             </ul>
         </div>
     )
