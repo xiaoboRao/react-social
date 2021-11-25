@@ -1,18 +1,10 @@
-import TopBar from "../../components/topBar/TopBar";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Rightbar from "../../components/rightbar/Rightbar";
-import Feed from "../../components/feed/Feed"
+import Profile from "../profile/Profile"
 import "./home.css"
 
 export default function Home() {
   return (
     <div>
-      <TopBar/>
-      <div className="homeContainer">
-        <Sidebar/>
-        <Feed/>
-        <Rightbar/>
-      </div>
+      <Profile/> 
     </div>
   );
 }
